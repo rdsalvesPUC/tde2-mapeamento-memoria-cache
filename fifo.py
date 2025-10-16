@@ -7,4 +7,12 @@ memoria = []
 pf_contador = 0
 
 def fifo(dados, paginas):
+	for i in dados:
+		if len(memoria) < paginas:
+			memoria.append(i)
+	return memoria
+
+fifo(dados_a, qtd_paginas)
+
+print(memoria)
 	
