@@ -3,16 +3,18 @@ dados_b = [4,5,7,9,46,45,14,4,64,7,65,2,1,6,8,45,14,11]
 dados_c = [4,6,7,8,1,6,10,15,16,4,2,1,4,6,12,15,16,11]
 
 qtd_paginas = 8
-memoria = []
+memoria_vazia = []
 pf_contador = 0
 
-def fifo(dados, paginas):
+def fifo(dados, memoria, paginas, pf):
 	for i in dados:
 		if len(memoria) < paginas:
-			memoria.append(i)
-	return memoria
+			if i not in memoria: 
+				memoria.append(i)
+				pf += 1
+			else:
+				print ("dado já alocado")
+	return print(memoria, pf)
 
-fifo(dados_a, qtd_paginas)
-
-print(memoria)
-	
+fifo(dados_a, memoria_vazia, qtd_paginas, pf_contador)
+	 
