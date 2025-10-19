@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Fifo {
+    public static int troca_de_pagina= 0;
+
     public static void main(String[] args) {
         int[] paginacao = new int[8];
         int paginas_ocupadas = 0;
@@ -20,14 +22,17 @@ public class Fifo {
             if (!existe(paginacao, paginas_ocupadas, pagina)) {
                 if (paginas_ocupadas < paginacao.length) {
                     paginacao[paginas_ocupadas] = pagina;
+                    troca_de_pagina++;
                     paginas_ocupadas++;
                 } else {
                     paginacao[proxima_pagina] = pagina;
                     proxima_pagina = (proxima_pagina + 1) % paginacao.length;
+                    troca_de_pagina++;
                 }
             }
             imprimir_linha(paginacao, paginas_ocupadas);
         }
+        contagem(troca_de_pagina);
     }
 
     private static boolean existe(int[] paginacao, int paginas_ocupadas, int pagina) {
@@ -45,5 +50,9 @@ public class Fifo {
             if (i < paginas_ocupadas - 1) System.out.print(" ");
         }
         System.out.println();
+    }
+
+    public static void contagem (int troca_de_pagina) {
+    System.out.println(troca_de_pagina);
     }
 }

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e9ce27c-ebbc-44d7-815b-e6c38b063c19" name="Changes" comment="Últimas mudanças">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Fifo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/Fifo.class" afterDir="false" />
+    <list default="true" id="8e9ce27c-ebbc-44d7-815b-e6c38b063c19" name="Changes" comment="Ajustes">
       <change beforePath="$PROJECT_DIR$/src/src/Fifo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Fifo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760909344783</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajustes">
+      <option name="closed" value="true" />
+      <created>1760911440930</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1760911440930</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -118,6 +124,7 @@
     <MESSAGE value="Mudança nome da variável" />
     <MESSAGE value="Mudança nome da variável para maior segunrança" />
     <MESSAGE value="Últimas mudanças" />
-    <option name="LAST_COMMIT_MESSAGE" value="Últimas mudanças" />
+    <MESSAGE value="Ajustes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustes" />
   </component>
 </project>
