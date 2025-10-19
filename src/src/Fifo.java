@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Fifo {
     public static void main(String[] args) {
         int[] paginacao = new int[8];
-        int paginasOcupadas = 0;
-        int proximaPagina = 0;
+        int paginas_ocupadas = 0;
+        int proxima_pagina = 0;
 
         Scanner leitor = new Scanner(System.in);
         System.out.println("Digite a sequência de páginas: ");
@@ -17,21 +17,21 @@ public class Fifo {
         }
 
         for (int pagina : sequencia) {
-            if (!existe(paginacao, paginasOcupadas, pagina)) {
-                if (paginasOcupadas < paginacao.length) {
-                    paginacao[paginasOcupadas] = pagina;
-                    paginasOcupadas++;
+            if (!existe(paginacao, paginas_ocupadas, pagina)) {
+                if (paginas_ocupadas < paginacao.length) {
+                    paginacao[paginas_ocupadas] = pagina;
+                    paginas_ocupadas++;
                 } else {
-                    paginacao[proximaPagina] = pagina;
-                    proximaPagina = (proximaPagina + 1) % paginacao.length;
+                    paginacao[proxima_pagina] = pagina;
+                    proxima_pagina = (proxima_pagina + 1) % paginacao.length;
                 }
             }
-            imprimirLinha(paginacao, paginasOcupadas);
+            imprimir_linha(paginacao, paginas_ocupadas);
         }
     }
 
-    private static boolean existe(int[] paginacao, int paginasOcupadas, int pagina) {
-        for (int i = 0; i < paginasOcupadas; i++) {
+    private static boolean existe(int[] paginacao, int paginas_ocupadas, int pagina) {
+        for (int i = 0; i < paginas_ocupadas; i++) {
             if (paginacao[i] == pagina) {
                 return true;
             }
@@ -39,10 +39,10 @@ public class Fifo {
         return false;
     }
 
-    private static void imprimirLinha(int[] paginacao, int paginasOcupadas) {
-        for (int i = 0; i < paginasOcupadas; i++) {
+    private static void imprimir_linha(int[] paginacao, int paginas_ocupadas) {
+        for (int i = 0; i < paginas_ocupadas; i++) {
             System.out.print(paginacao[i]);
-            if (i < paginasOcupadas - 1) System.out.print(" ");
+            if (i < paginas_ocupadas - 1) System.out.print(" ");
         }
         System.out.println();
     }

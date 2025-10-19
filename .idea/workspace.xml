@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e9ce27c-ebbc-44d7-815b-e6c38b063c19" name="Changes" comment="" />
+    <list default="true" id="8e9ce27c-ebbc-44d7-815b-e6c38b063c19" name="Changes" comment="Últimas mudanças">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/Fifo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/Fifo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Fifo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Fifo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +22,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Luc-Bruno"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/rdsalvesPUC/tde2-mapeamento-memoria-cache.git",
+    "accountId": "1742f977-678e-46fd-8ca8-5949db04d962"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -54,6 +70,54 @@
       <updated>1760886977778</updated>
       <workItem from="1760886979079" duration="10000" />
     </task>
+    <task id="LOCAL-00001" summary="Fifo Usando Java">
+      <option name="closed" value="true" />
+      <created>1760907107717</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760907107717</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fifo Usando Java">
+      <option name="closed" value="true" />
+      <created>1760907208912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760907208912</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Mudança nome da variável">
+      <option name="closed" value="true" />
+      <created>1760907772896</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760907772896</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Mudança nome da variável para maior segunrança">
+      <option name="closed" value="true" />
+      <created>1760907859376</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760907859376</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Últimas mudanças">
+      <option name="closed" value="true" />
+      <created>1760909344782</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760909344783</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fifo Usando Java" />
+    <MESSAGE value="Mudança nome da variável" />
+    <MESSAGE value="Mudança nome da variável para maior segunrança" />
+    <MESSAGE value="Últimas mudanças" />
+    <option name="LAST_COMMIT_MESSAGE" value="Últimas mudanças" />
   </component>
 </project>
