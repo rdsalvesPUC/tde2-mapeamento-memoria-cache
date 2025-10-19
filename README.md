@@ -1,56 +1,90 @@
-Em um grupo de até 4 pessoas, pesquisar e explicar em um vídeo de até 10 minutos os seguintes assuntos.:
+# TDE2 — Mapeamento de Memória Cache
 
-Implemente na linguagem de sua preferencia:
+> Trabalho em grupo (até 4 pessoas): pesquisar e explicar em vídeo (até 10 min) os algoritmos **FIFO, LRU e MRU** de substituição de páginas.  
+> Implementação em linguagem de preferência **(sem uso de IA)**. Variáveis e comentários **em português**.
 
-O algoritmo MRU (realizar pesquisa sobre);
+## 📑 Índice
 
-O Algoritmo LRU;
+1. [Objetivo](#objetivo)
+2. [Integrantes](#integrantes)
+3. [Escopo e Requisitos](#escopo-e-requisitos)
+4. [Conceitos e Políticas de Substituição](#conceitos-e-políticas-de-substituição)
+    - [FIFO](#fifo)
+    - [LRU](#lru)
+    - [MRU](#mru)
+5. [Metodologia e Implementação](#metodologia-e-implementação)
+    - [Regras comuns](#regras-comuns)
+    - [Estruturas de dados sugeridas](#estruturas-de-dados-sugeridas)
+    - [Diretórios de entrega](#diretórios-de-entrega)
+6. [Como testar (8 quadros)](#como-testar-8-quadros)
+    - [Sequência A](#sequência-a)
+    - [Sequência B](#sequência-b)
+    - [Sequência C](#sequência-c)
+7. [Resultados e Respostas](#resultados-e-respostas)
+8. [Discussão: Qual a melhor política?](#discussão-qual-a-melhor-política)
+9. [Roteiro do Vídeo (até 10 min)](#roteiro-do-vídeo-até-10-min)
+10. [Conformidade e Observações do Professor](#conformidade-e-observações-do-professor)
+11. [Licença](#licença)
 
-O algoritmo FIFO;
+---
 
-1  - Teste com a sequencia de paginas para 8 quadros.:
+## Objetivo
 
-a ) 4,3,25,8,19,6,25,8,16,35,45,22,8,3,16,25,7
+Demonstrar, comparar e explicar as políticas **FIFO**, **LRU** e **MRU** de substituição de páginas em memória cache, avaliando **page faults** e o **quadro final** de cada sequência de acesso, com **8 quadros**.
 
-qual quadro na memória possuirá a página 7 ?
+## Integrantes
 
- b)  4,5,7,9,46,45,14,4,64,7,65,2,1,6,8,45,14,11
+-   Rodrigo da Silva Alves
+-   Richard Mickael
+-   Marco Alija Ramos
+-   Lucas Bruno
 
-qual quadro na memória possuirá a página 11?
+## Escopo e Requisitos
 
- c) 4,6,7,8,1,6,10,15,16,4,2,1,4,6,12,15,16,11 
+-   Implementar **FIFO, LRU e MRU**.
+-   Testar com **8 quadros** e as sequências fornecidas.
+-   Responder:
+    -   **A)** Em qual quadro estará a **página 7**?
+    -   **B)** Em qual quadro estará a **página 11**?
+    -   **C)** Em qual quadro estará a **página 11**?
 
-qual quadro na memória possuirá a página 11?
+---
 
- 
+## Conceitos e Políticas de Substituição
 
-2 - Qual a melhor politica de substituição?
+### FIFO
 
- 
+**First-In, First-Out**: remove a página que **está há mais tempo** na memória (ordem de chegada).  
+**Intuição**: fila simples; não considera recência de uso.
 
- 
+### LRU
 
-Observações:
+**Least Recently Used**: remove a página **menos recentemente usada**.  
+**Intuição**: se não uso há muito, é menos provável que eu precise agora (localidade temporal).
 
-1 - No vídeo os acadêmicos (todos do grupo) devem explicar o trabalho.
+### MRU
 
-2 - Explicar cada algoritmo e implementação.
+**Most Recently Used**: remove a página **mais recentemente usada**.  
+**Intuição**: em certos padrões sequenciais, a página recém-usada é a **menos provável** de ser reutilizada imediatamente.
 
-3 - Explicar os resultados respondendo as perguntas e explanando as respostas.
+---
 
-4 - A atividade deverá ser entregue no github e o link do vídeo(não listado) no youtube deverá estar escrito no arquivo README.
+## Metodologia e Implementação
 
-Não serão aceitas entregas atrasadas, ou seja, é melhor entregar incompleto do que tentar o envio extemporâneo.
+### Regras comuns
 
-5 - Em caso do professor sentir necessidade, os grupos poderão ser convocados para autoria do trabalho. Se algum membro do grupo não souber responder perguntas relativas a implementação e o trabalho, a nota atribuída será decrescida  em 40% da nota do GRUPO.
+-   **Acerto (hit)**: página já está na memória → **não há page fault**.
+-   **Falta (fault)**: página não está na memória → **carrega** a página; se a memória estiver cheia, **remove** conforme a política.
+-   **8 quadros** (índices 0..7 ou 1..8, defina padrão e mantenha).
 
-6 - É EXPRESSAMENTE PROIBIDA A UTILIZAÇÃO DE FERRAMENTAS NA CONFECÇÃO DO CÓDIGO. Se for detectada a utilização de IA a atividade será zerada.
+### Estruturas de dados sugeridas
 
-7 - Todas as variáveis deverão estar em português, assim como possíveis comentários. 
+_(Sugestão, não código pronto; escolha a que dominar na sua linguagem):_
 
-8 - Na entrega dos códigos, um diretório deverá ser disponibilizado com comentários nos códigos e outro diretório com os mesmos códigos sem comentários deverá ser fornecido para a autoria( caso haja convocação para tal).
+-   **FIFO**: fila/índice circular para o “próximo a sair”.
+-   **LRU**: lista atualizada a cada acesso (move para “mais recente”) **ou** mapa com “timestamp” de último uso.
+-   **MRU**: igual ao LRU para rastrear ordem, mas remove o **mais recente**.
 
- 
+> **Dica de implementação manual**: mantenha, junto aos quadros, um **registro de uso** (contador crescente ou “posição de recência”). Em **LRU**, remove o **menor**; em **MRU**, remove o **maior**.
 
-Essa atividade corresponde a 2 pontos do RA1.
-
+### Diretórios de entrega
