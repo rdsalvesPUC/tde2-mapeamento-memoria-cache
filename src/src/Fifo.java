@@ -7,7 +7,7 @@ public class Fifo {
         int proxima_pagina = 0;
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Digite a sequência de páginas:");
+        System.out.println("Digite a sequência de páginas: ");
         String entrada = scan.nextLine();
 
         String[] partes = entrada.split(",");
