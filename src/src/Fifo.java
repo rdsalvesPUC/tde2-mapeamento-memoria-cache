@@ -30,8 +30,8 @@ public class Fifo {
         }
     }
 
-    private static boolean existe(int[] paginacao, int paginas_ocupadas, int pagina) {
-        for (int i = 0; i < paginas_ocupadas; i++) {
+    private static boolean existe(int[] paginacao, int paginasOcupadas, int pagina) {
+        for (int i = 0; i < paginasOcupadas; i++) {
             if (paginacao[i] == pagina) {
                 return true;
             }
@@ -39,10 +39,10 @@ public class Fifo {
         return false;
     }
 
-    private static void imprimirLinha(int[] paginacao, int paginas_ocupadas) {
-        for (int i = 0; i < paginas_ocupadas; i++) {
+    private static void imprimirLinha(int[] paginacao, int paginasOcupadas) {
+        for (int i = 0; i < paginasOcupadas; i++) {
             System.out.print(paginacao[i]);
-            if (i < paginas_ocupadas - 1) System.out.print(" ");
+            if (i < paginasOcupadas - 1) System.out.print(" ");
         }
         System.out.println();
     }
