@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e9ce27c-ebbc-44d7-815b-e6c38b063c19" name="Changes" comment="Ajustes">
+    <list default="true" id="8e9ce27c-ebbc-44d7-815b-e6c38b063c19" name="Changes" comment="contagem de troca de página">
       <change beforePath="$PROJECT_DIR$/src/src/Fifo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Fifo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760911440930</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="contagem de troca de página">
+      <option name="closed" value="true" />
+      <created>1760912529374</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760912529374</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,6 +133,7 @@
     <MESSAGE value="Mudança nome da variável para maior segunrança" />
     <MESSAGE value="Últimas mudanças" />
     <MESSAGE value="Ajustes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustes" />
+    <MESSAGE value="contagem de troca de página" />
+    <option name="LAST_COMMIT_MESSAGE" value="contagem de troca de página" />
   </component>
 </project>
