@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Fifo {
     public static void main(String[] args) {
         int[] paginacao = new int[8];
-        int paginas_ocupadas = 0;
-        int proxima_pagina = 0;
+        int paginasOcupadas = 0;
+        int proximaPagina = 0;
 
         Scanner leitor = new Scanner(System.in);
         System.out.println("Digite a sequência de páginas: ");
@@ -17,16 +17,16 @@ public class Fifo {
         }
 
         for (int pagina : sequencia) {
-            if (!existe(paginacao, paginas_ocupadas, pagina)) {
-                if (paginas_ocupadas < paginacao.length) {
-                    paginacao[paginas_ocupadas] = pagina;
-                    paginas_ocupadas++;
+            if (!existe(paginacao, paginasOcupadas, pagina)) {
+                if (paginasOcupadas < paginacao.length) {
+                    paginacao[paginasOcupadas] = pagina;
+                    paginasOcupadas++;
                 } else {
-                    paginacao[proxima_pagina] = pagina;
-                    proxima_pagina = (proxima_pagina + 1) % paginacao.length;
+                    paginacao[proximaPagina] = pagina;
+                    proximaPagina = (proximaPagina + 1) % paginacao.length;
                 }
             }
-            imprimirLinha(paginacao, paginas_ocupadas);
+            imprimirLinha(paginacao, paginasOcupadas);
         }
     }
 
