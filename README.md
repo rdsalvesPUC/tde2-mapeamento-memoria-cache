@@ -28,7 +28,7 @@ Demonstrar, comparar e explicar as políticas **FIFO**, **LRU** e **MRU** de sub
 ## Integrantes
 
 -   Rodrigo da Silva Alves
--   Richard Mickaell
+-   Richard Mickael
 -   Marco Alija Ramos
 -   Lucas Bruno
 
@@ -63,3 +63,52 @@ Demonstrar, comparar e explicar as políticas **FIFO**, **LRU** e **MRU** de sub
 ---
 
 ### Diretórios de entrega
+
+/com_comentarios/
+/sem_comentarios/
+
+### Sequência A
+
+> 4, 3, 25, 8, 19, 6, 25, 8, 16, 35, 45, 22, 8, 3, 16, 25, 7
+
+**Pergunta A**: Em qual quadro na memória possuirá a **página 7**?
+
+-   **FIFO**: página **7** no **quadro → 5**
+-   **LRU**: página **7** no **quadro → 6**
+-   **MRU**: página **7** no **quadro → 3**
+
+---
+
+### Sequência B
+
+> 4, 5, 7, 9, 46, 45, 14, 4, 64, 7, 65, 2, 1, 6, 8, 45, 14, 11
+
+**Pergunta B**: Em qual quadro na memória possuirá a **página 11**?
+
+-   **FIFO**: página **11** no **quadro → 6**
+-   **LRU**: página **11** no **quadro → 3**
+-   **MRU**: página **11** no **quadro → 7**
+
+---
+
+### Sequência C
+
+> 4, 6, 7, 8, 1, 6, 10, 15, 16, 4, 2, 1, 4, 6, 12, 15, 16, 11
+
+**Pergunta C**: Em qual quadro na memória possuirá a **página 11**?
+
+-   **FIFO**: página **11** no **quadro → 5**
+-   **LRU**: página **11** no **quadro → 6**
+-   **MRU**: página **11** no **quadro → 8**
+
+---
+
+## Discussão: Qual a melhor política?
+
+> Se o critério de melhor, for a menor quantidade de **Page Fault**, então tivemos o seguinte resultado:
+
+**FIFO**: Page Fault em cada sequência **A)** 13 - **B)** 14 - **C)** 13
+**LRU**: Page Fault em cada sequência **A)** 12 - **B)** 16 - **C)** 11
+**MRU**: Page Fault em cada sequência **A)** 11 - **B)** 14 - **C)** 12
+
+> Conclusão: **MRU** se saiu melhor com esses 3 conjuntos de dados..
