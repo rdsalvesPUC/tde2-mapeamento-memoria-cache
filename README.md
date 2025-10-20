@@ -28,7 +28,7 @@ Demonstrar, comparar e explicar as políticas **FIFO**, **LRU** e **MRU** de sub
 ## Integrantes
 
 -   Rodrigo da Silva Alves
--   Richard Mickael
+-   Richard Mickaell
 -   Marco Alija Ramos
 -   Lucas Bruno
 
@@ -107,8 +107,8 @@ Demonstrar, comparar e explicar as políticas **FIFO**, **LRU** e **MRU** de sub
 
 > Se o critério de melhor, for a menor quantidade de **Page Fault**, então tivemos o seguinte resultado:
 
-**FIFO**: Page Fault em cada sequência **A)** 13 - **B)** 14 - **C)** 13
-**LRU**: Page Fault em cada sequência **A)** 12 - **B)** 16 - **C)** 11
-**MRU**: Page Fault em cada sequência **A)** 11 - **B)** 14 - **C)** 12
+-   **FIFO**: Page Fault em cada sequência **A)** 13 - **B)** 14 - **C)** 13
+-   **LRU**: Page Fault em cada sequência **A)** 12 - **B)** 16 - **C)** 11
+-   **MRU**: Page Fault em cada sequência **A)** 11 - **B)** 14 - **C)** 12
 
 > Conclusão: **MRU** se saiu melhor com esses 3 conjuntos de dados..
