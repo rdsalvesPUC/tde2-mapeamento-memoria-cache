@@ -1,7 +1,8 @@
 # TDE2 — Mapeamento de Memória Cache
 
-> Trabalho em grupo (até 4 pessoas): pesquisar e explicar em vídeo (até 10 min) os algoritmos **FIFO, LRU e MRU** de substituição de páginas.  
-> Implementação em linguagem de preferência **(sem uso de IA)**. Variáveis e comentários **em português**.
+> Trabalho em grupo (até 4 pessoas): pesquisar e explicar em vídeo (até 10 min) os algoritmos **FIFO, LRU e MRU** de substituição de páginas.
+
+> **Link do Vídeo:** https://youtu.be/WsOhkRPPsTE
 
 ## 📑 Índice
 
@@ -12,19 +13,11 @@
     - [FIFO](#fifo)
     - [LRU](#lru)
     - [MRU](#mru)
-5. [Metodologia e Implementação](#metodologia-e-implementação)
-    - [Regras comuns](#regras-comuns)
-    - [Estruturas de dados sugeridas](#estruturas-de-dados-sugeridas)
-    - [Diretórios de entrega](#diretórios-de-entrega)
-6. [Como testar (8 quadros)](#como-testar-8-quadros)
-    - [Sequência A](#sequência-a)
-    - [Sequência B](#sequência-b)
-    - [Sequência C](#sequência-c)
-7. [Resultados e Respostas](#resultados-e-respostas)
-8. [Discussão: Qual a melhor política?](#discussão-qual-a-melhor-política)
-9. [Roteiro do Vídeo (até 10 min)](#roteiro-do-vídeo-até-10-min)
-10. [Conformidade e Observações do Professor](#conformidade-e-observações-do-professor)
-11. [Licença](#licença)
+5. [Diretórios de entrega](#diretórios-de-entrega)
+6. [Sequência A](#sequência-a)
+7. [Sequência B](#sequência-b)
+8. [Sequência C](#sequência-c)
+9. [Discussão: Qual a melhor política?](#discussão-qual-a-melhor-política)
 
 ---
 
@@ -35,7 +28,7 @@ Demonstrar, comparar e explicar as políticas **FIFO**, **LRU** e **MRU** de sub
 ## Integrantes
 
 -   Rodrigo da Silva Alves
--   Richard Mickael
+-   Richard Mickaell
 -   Marco Alija Ramos
 -   Lucas Bruno
 
@@ -69,22 +62,53 @@ Demonstrar, comparar e explicar as políticas **FIFO**, **LRU** e **MRU** de sub
 
 ---
 
-## Metodologia e Implementação
-
-### Regras comuns
-
--   **Acerto (hit)**: página já está na memória → **não há page fault**.
--   **Falta (fault)**: página não está na memória → **carrega** a página; se a memória estiver cheia, **remove** conforme a política.
--   **8 quadros** (índices 0..7 ou 1..8, defina padrão e mantenha).
-
-### Estruturas de dados sugeridas
-
-_(Sugestão, não código pronto; escolha a que dominar na sua linguagem):_
-
--   **FIFO**: fila/índice circular para o “próximo a sair”.
--   **LRU**: lista atualizada a cada acesso (move para “mais recente”) **ou** mapa com “timestamp” de último uso.
--   **MRU**: igual ao LRU para rastrear ordem, mas remove o **mais recente**.
-
-> **Dica de implementação manual**: mantenha, junto aos quadros, um **registro de uso** (contador crescente ou “posição de recência”). Em **LRU**, remove o **menor**; em **MRU**, remove o **maior**.
-
 ### Diretórios de entrega
+
+/com_comentarios/
+/sem_comentarios/
+
+### Sequência A
+
+> 4, 3, 25, 8, 19, 6, 25, 8, 16, 35, 45, 22, 8, 3, 16, 25, 7
+
+**Pergunta A**: Em qual quadro na memória possuirá a **página 7**?
+
+-   **FIFO**: página **7** no **quadro → 5**
+-   **LRU**: página **7** no **quadro → 6**
+-   **MRU**: página **7** no **quadro → 3**
+
+---
+
+### Sequência B
+
+> 4, 5, 7, 9, 46, 45, 14, 4, 64, 7, 65, 2, 1, 6, 8, 45, 14, 11
+
+**Pergunta B**: Em qual quadro na memória possuirá a **página 11**?
+
+-   **FIFO**: página **11** no **quadro → 6**
+-   **LRU**: página **11** no **quadro → 3**
+-   **MRU**: página **11** no **quadro → 7**
+
+---
+
+### Sequência C
+
+> 4, 6, 7, 8, 1, 6, 10, 15, 16, 4, 2, 1, 4, 6, 12, 15, 16, 11
+
+**Pergunta C**: Em qual quadro na memória possuirá a **página 11**?
+
+-   **FIFO**: página **11** no **quadro → 5**
+-   **LRU**: página **11** no **quadro → 6**
+-   **MRU**: página **11** no **quadro → 8**
+
+---
+
+## Discussão: Qual a melhor política?
+
+> Se o critério de melhor, for a menor quantidade de **Page Fault**, então tivemos o seguinte resultado:
+
+-   **FIFO**: Page Fault em cada sequência **A)** 13 - **B)** 14 - **C)** 13
+-   **LRU**: Page Fault em cada sequência **A)** 12 - **B)** 16 - **C)** 11
+-   **MRU**: Page Fault em cada sequência **A)** 11 - **B)** 14 - **C)** 12
+
+> Conclusão: **MRU** se saiu melhor com esses 3 conjuntos de dados..
